@@ -6,6 +6,8 @@ from .models import destination
 def index(request):
 
     dest1 = destination() 
+    dest1.name = 'Munbai'
+    dest1.desc = 'The City That Never Sleeps'
 
     return render (request, "index.html", {'dest1': dest1})
 
