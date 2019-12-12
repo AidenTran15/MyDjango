@@ -1,4 +1,5 @@
 {% load static %}
+{% static "images" %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -249,6 +250,8 @@
 				<div class="col">
 					<div class="destinations_container item_grid">
 
+
+						{% for dest in dests%}
 						<!-- Destination -->
 						<div class="destination item">
 							<div class="destination_image">
@@ -256,11 +259,13 @@
 								<div class="spec_offer text-center"><a href="#">Special Offer</a></div>
 							</div>
 							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">{{dest1.name}}</a></div>
-								<div class="destination_subtitle"><p>{{dest1.desc}}</p></div>
-								<div class="destination_price">{{dest1.price}}</div>
+								<div class="destination_title"><a href="destinations.html">{{dest.name}}</a></div>
+								<div class="destination_subtitle"><p>{{dest.desc}}</p></div>
+								<div class="destination_price">{{dest.price}}</div>
 							</div>
 						</div>
+						
+						{% endfor %}
 
 						<!-- Destination -->
 						<div class="destination item">
@@ -386,9 +391,9 @@
 		</div>
 		<div class="test_nav">
 			<ul class="d-flex flex-column align-items-end justify-content-end">
-				<li><a href="{% static '#' %}">City Breaks Clients<span>01</span></a></li>
-				<li><a href="{% static '#' %}">Cruises Clients<span>02</span></a></li>
-				<li><a href="{% static '#' %}">All Inclusive Clients<span>03</span></a></li>
+				<li><a href="#">City Breaks Clients<span>01</span></a></li>
+				<li><a href="#">Cruises Clients<span>02</span></a></li>
+				<li><a href="#">All Inclusive Clients<span>03</span></a></li>
 			</ul>
 		</div>
 	</div>
@@ -403,7 +408,7 @@
 						
 						<!-- News Post -->
 						<div class="news_post d-flex flex-md-row flex-column align-items-start justify-content-start">
-							<div class="news_post_image"><img src="i{% static 'mages/news_1.jpg' %}" alt=""></div>
+							<div class="news_post_image"><img src="{% static 'images/news_1.jpg' %}" alt=""></div>
 							<div class="news_post_content">
 								<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
 									<div>02</div>
