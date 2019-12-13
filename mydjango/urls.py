@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', include('travello.urls')),
     path('admin/', admin.site.urls),
-    
+    path('accounts/', include('accounts.urls'))
 ]
 
 utlpattern = urlpatterns + static(settings.Media_URL, document_root=settings.Media)
