@@ -26,7 +26,7 @@ def register(request):
                 print('user created')
                 return redirect('/')
         else:
-            print("Password not matching..")
+            messages.info(request, 'Password not matching')
             return redirect('register')
         return redirect('/')
     else:
